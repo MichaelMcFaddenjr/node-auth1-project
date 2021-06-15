@@ -7,14 +7,8 @@
   }
 */
 function restricted(req, res, next) {
-  if (req.session.user) {
-    next()
-  } else {
-    next({
-    status: 401,
-    message: "You Shall not pass!"
-    })
-  }
+  console.log('restricted')
+  next()
 }
 
 /*
